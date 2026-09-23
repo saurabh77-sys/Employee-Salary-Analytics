@@ -1,9 +1,10 @@
 from mysql.connector import connect
+from getpass import getpass
 
 conn = connect(
     host="127.0.0.1",
     user="root",
-    password="root",
+    password=getpass("Enter MySQL password:"),
     database="empolyee",
     port=3306,
     use_pure=True
@@ -16,15 +17,6 @@ print("TASK 1")
 cursor.execute("SELECT * FROM employee_db")
 data = cursor.fetchall()
 
-#for row in data:
-    
-  # salary = row[3]
-   #if salary>=50000:
-    #print("High Salary")
-  # elif salary>=40000:
-   #  print("Medium Salary")
-   #else:
-    # print("Low Salary")
 
 
 for row in data:
