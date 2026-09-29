@@ -1,30 +1,63 @@
-# Employee Salary Analytics
+# 💼 Employee Salary Analytics
 
-A Python + MySQL project that runs 10 salary-analysis tasks over an employee database.
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/mysql--connector--python-00758F?style=for-the-badge" alt="mysql-connector-python" />
+</p>
 
-## What it does
-Connects to a MySQL database (`empolyee`, table `employee_db`) and performs 10 tasks:
+A **Python + MySQL** project that runs **10 automated salary-analysis tasks** over an
+employee database — salary bands, department bonuses, tax, performance bonuses,
+increments, incentives and summary tables, all in one script.
 
-1. **Salary categorization** — labels each employee High (≥ ₹50,000), Medium (≥ ₹40,000), or Low salary.
-2. **Department bonus** — IT 15%, Sales 10%, others 8%; prints bonus and final salary.
-3. **Tax calculation** — 10% tax on salaries ≥ ₹50,000, else 5%; shows salary after tax (for salaries above ₹40,000).
-4. **Performance bonus** — department-based score (IT 90, Sales 80, others 75) mapped to a 15%/10%/5% bonus.
-5. **Summary table** — writes per-employee bonus and final salary into a new `employee_summary` table.
-6. **Department totals & averages** — total and average salary for IT, HR, and Sales.
-7. **Promotion eligibility** — flags employees earning ≥ ₹50,000 as eligible for promotion.
-8. **Salary increment** — calculates incremented salary by department (IT 12%, Sales 10%, others 8%).
-9. **Incentive table** — writes slab-based incentives (₹5000 / ₹3000 / ₹2000) into an `employee_incentive` table.
-10. **Salary range** — highest salary, lowest salary, and the difference between them.
+## ✨ What it does
 
-## Files
-- `Solution.py` — the main script with all 10 tasks
-- `Supporting_Dataset.sql` — sample dataset to load into MySQL
-- `requirements.txt` — Python dependencies
+Connects to MySQL (database `empolyee`, table `employee_db`) and executes 10 tasks:
 
-## Run it
-1. Load `Supporting_Dataset.sql` into MySQL (it creates the `empolyee` database and `employee_db` table).
-2. `pip install -r requirements.txt`
-3. `python Solution.py` — you will be asked for your MySQL password; it is never hardcoded in the script.
+| # | Task | Details |
+|---|------|---------|
+| 1 | Salary categorization | Labels each employee **High** (≥ ₹50,000), **Medium** (≥ ₹40,000) or **Low** salary |
+| 2 | Department bonus | IT **15%**, Sales **10%**, others **8%** — prints bonus and final salary |
+| 3 | Tax calculation | **10%** tax on salaries ≥ ₹50,000, else **5%** — shows after-tax salary (above ₹40,000) |
+| 4 | Performance bonus | Department score (IT 90, Sales 80, others 75) mapped to a **15% / 10% / 5%** bonus |
+| 5 | Summary table | Writes per-employee bonus and final salary into a new `employee_summary` table |
+| 6 | Department totals & averages | Total and average salary for **IT, HR and Sales** |
+| 7 | Promotion eligibility | Flags employees earning ≥ ₹50,000 as eligible for promotion |
+| 8 | Salary increment | Calculates incremented salary by department — IT **12%**, Sales **10%**, others **8%** |
+| 9 | Incentive table | Writes slab-based incentives (**₹5000 / ₹3000 / ₹2000**) into `employee_incentive` |
+| 10 | Salary range | Highest salary, lowest salary, and the difference between them |
 
-## Tech
+## 🗂 Project structure
+
+```
+Employee-Salary-Analytics/
+├── Solution.py            # Main script — all 10 tasks
+├── Supporting_Dataset.sql # Sample dataset (creates DB + table + rows)
+├── requirements.txt       # Python dependencies
+└── README.md
+```
+
+## 🚀 Quickstart
+
+```bash
+# 1. Load the sample dataset into MySQL
+mysql -u root -p < Supporting_Dataset.sql
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run — you will be asked for your MySQL password (via getpass, never hardcoded)
+python Solution.py
+```
+
+## 🛠 Tech
+
 Python · MySQL · SQL · mysql-connector-python
+
+## 👤 Author
+
+**Saurabh Jadhav** — B.Sc. (CBZ), 2026 · Python / SQL / Power BI / Machine Learning
+
+- GitHub: https://github.com/saurabh77-sys
+- LinkedIn: https://www.linkedin.com/in/saurabh-jadhav-8492151a9
+- Portfolio: https://saurabh77-sys.github.io/
